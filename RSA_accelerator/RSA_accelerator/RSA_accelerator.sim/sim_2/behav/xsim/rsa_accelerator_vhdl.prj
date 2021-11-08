@@ -1,0 +1,14 @@
+# compile vhdl design source files
+vhdl2008 xil_defaultlib  \
+"../../../../../../Exponentiation/source/MonProBit.vhd" \
+"../../../../../source/rsa_regio.vhd" \
+"../../../../../source/rsa_msgin.vhd" \
+"../../../../../source/rsa_msgout.vhd" \
+"../../../../../../Exponentiation/source/exponentiation.vhd" \
+"../../../../../source/rsa_core.vhd" \
+
+vhdl xil_defaultlib  \
+"../../../../../source/rsa_accelerator.vhd" \
+
+# Do not sort compile order
+nosort

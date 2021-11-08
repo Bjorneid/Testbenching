@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl2008 xil_defaultlib  \
+"../../../../../../Exponentiation/source/MonProBit.vhd" \
+
+vhdl xil_defaultlib  \
+"../../../../RSA_accelerator.srcs/sim_2/new/MONPRO_tb.vhd" \
+
+# Do not sort compile order
+nosort

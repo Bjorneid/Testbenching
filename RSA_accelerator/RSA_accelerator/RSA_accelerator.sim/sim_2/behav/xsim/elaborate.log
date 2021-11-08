@@ -1,0 +1,7 @@
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 20ee55adf0f440eaa7e364ee1808fd9e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot MONPRO_tb_behav xil_defaultlib.MONPRO_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-664] expression has 8 elements ; expected 258 [C:/Skole/Digital_systems/Testbenching/RSA_accelerator/RSA_accelerator/RSA_accelerator.srcs/sim_2/new/MONPRO_tb.vhd:94]
+ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit monpro_tb in library work failed.

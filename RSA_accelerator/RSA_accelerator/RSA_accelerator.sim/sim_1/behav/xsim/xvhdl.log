@@ -1,0 +1,11 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Skole/Digital_systems/Testbenching/Exponentiation/source/MonProBit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'MonProBit'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Skole/Digital_systems/Testbenching/Exponentiation/source/exponentiation.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'exponentiation'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Skole/Digital_systems/Testbenching/RSA_accelerator/source/rsa_core.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'rsa_core'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Skole/Digital_systems/Testbenching/RSA_accelerator/testbench/rsa_accelerator_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'rsa_accelerator_tb'
+ERROR: [VRFC 10-3353] formal port 'key_r' has no actual or default value [C:/Skole/Digital_systems/Testbenching/RSA_accelerator/testbench/rsa_accelerator_tb.vhd:561]
+ERROR: [VRFC 10-3782] unit 'struct' ignored due to previous errors [C:/Skole/Digital_systems/Testbenching/RSA_accelerator/testbench/rsa_accelerator_tb.vhd:20]
+INFO: [VRFC 10-3070] VHDL file 'C:/Skole/Digital_systems/Testbenching/RSA_accelerator/testbench/rsa_accelerator_tb.vhd' ignored due to errors
