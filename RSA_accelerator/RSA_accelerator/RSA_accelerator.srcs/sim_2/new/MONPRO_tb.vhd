@@ -7,11 +7,7 @@
 -- *****************************************************************************
 library ieee;
 use ieee.std_logic_1164.all;
-use ieee.math_real.all;
 use ieee.numeric_std.all;
-
-library std;
-use std.textio.all;
 
 entity MONPRO_tb is
 end MONPRO_tb;
@@ -57,23 +53,14 @@ begin
 		wait for 6 ns;
 	end process;
 
-	-- reset_n generator
-	reset_gen: process is
-	begin
-		reset_n <= '0';
-		wait for 20 ns;
-		reset_n <= '1';
-		wait;
-	end process;
-
 	-----------------------------------------------------------------------------
 	-- Testing
 	-----------------------------------------------------------------------------
 	testing: process
 	   begin
-	   if (clk'event and clk='1') then
-	       
-	   end if;
+	   A <= "100001";
+	   B <= "100001";
+	   n <= "0";
 	end process;
 
 ---------------------------------------------------------------------------------
@@ -102,7 +89,5 @@ MONPRO1 : entity work.MonProBit
 		n                => n,
 		u                => u
 	);
-
-
 
 end Behavioral;
