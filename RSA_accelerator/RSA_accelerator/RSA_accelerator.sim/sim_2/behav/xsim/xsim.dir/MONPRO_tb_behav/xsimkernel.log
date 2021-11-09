@@ -1,0 +1,4 @@
+Running: xsim.dir/MONPRO_tb_behav/xsimk.exe -simmode gui -wdb MONPRO_tb_behav.wdb -simrunnum 0 -socket 50501
+Design successfully loaded
+Design Loading Memory Usage: 5856 KB (Peak: 5856 KB)
+Design Loading CPU Usage: 15 ms

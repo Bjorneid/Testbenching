@@ -24,7 +24,7 @@ architecture Behavioral of MONPRO_tb is
 	-- Clocks and reset
 	-----------------------------------------------------------------------------
 	signal clk              : std_logic;
-	signal reset_n          : std_logic;
+	signal reset_n          : std_logic := '0';
 
     -----------------------------------------------------------------------------
     -- Signals required for testing
@@ -39,37 +39,6 @@ architecture Behavioral of MONPRO_tb is
            
     signal u               : unsigned (C_BLOCK_SIZE - 1 downto 0) := (others => '0');	-- The end result after the algorithm completes.
 
-	-----------------------------------------------------------------------------
-	-- Function for converting from hex strings to std_logic_vector.
-	-----------------------------------------------------------------------------
-	function str_to_stdvec(inp: string) return unsigned is
-		variable temp: unsigned(4*inp'length-1 downto 0) := (others => 'X');
-		variable temp1 : unsigned(3 downto 0);
-	begin
-		for i in inp'range loop
-			case inp(i) is
-				 when '0' =>	 temp1 := x"0";
-				 when '1' =>	 temp1 := x"1";
-				 when '2' =>	 temp1 := x"2";
-				 when '3' =>	 temp1 := x"3";
-				 when '4' =>	 temp1 := x"4";
-				 when '5' =>	 temp1 := x"5";
-				 when '6' =>	 temp1 := x"6";
-				 when '7' =>	 temp1 := x"7";
-				 when '8' =>	 temp1 := x"8";
-				 when '9' =>	 temp1 := x"9";
-				 when 'A'|'a' => temp1 := x"a";
-				 when 'B'|'b' => temp1 := x"b";
-				 when 'C'|'c' => temp1 := x"c";
-				 when 'D'|'d' => temp1 := x"d";
-				 when 'E'|'e' => temp1 := x"e";
-				 when 'F'|'f' => temp1 := x"f";
-				 when others =>  temp1 := "XXXX";
-			end case;
-			temp(4*(i-1)+3 downto 4*(i-1)) := temp1;
-		end loop;
-		return temp;
-	end function str_to_stdvec;
 
 
 begin
@@ -91,7 +60,15 @@ begin
 	-----------------------------------------------------------------------------
 	testing: process
 	   begin
+	   --reset_n <= '0';
+	   wait for 20ns;
+	   reset_n <= '1';
+	   extDataReady <= '1';
 	   extRecvReady <= '1';
+	   A <= "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000110100";
+	   B <= "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000";
+	   n <= "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001110111";
+	   wait;
 	end process;
 
 ---------------------------------------------------------------------------------
